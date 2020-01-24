@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/functions.php';
 
-$lang = "";
+$lang = "";Оставить заявку на расчет стоимости
 
 if (isset($_GET['lang'])) {
     $lang = filter($_GET['lang']);
@@ -145,6 +145,10 @@ $phone1wp = '79161352444';
 						<div class="btns">
 							<a href="/account" class="btn" target="_self"><?=$language['main-btn1']; ?></a>
 							<a href="#modal_question"  class="v1 fancybox"><?=$language['main-btn2']; ?></a>
+							<form action="http://home.courierexe.ru/290/tracking">
+								<input type="text" class="v1" name="orderno">
+								<input type="submit" name="singlebutton" class="v1" value="submit">
+							</form>
 						</div>
 					</div>
 				</div>
@@ -400,12 +404,12 @@ $phone1wp = '79161352444';
 						<h1 class="title_def white">
 							<?=$language['tracking']; ?>
 						</h1>
-						<form action="http://home.courierexe.ru/290/tracking" method='GET'>
+						<form method='post'>
 							<p>
 								<?=$language['tracking_text']; ?>
 							</p>
-							<input type="text" class="mail-number" name="orderno" placeholder="<?=$language['track_number']; ?>" required><br>
-							<button class="v1" type="submit" name="singlebutton"><?=$language['track_btn']; ?></button>
+							<input type="text" class="mail-number" name="mail-number" placeholder="<?=$language['track_number']; ?>" required><br>
+							<button class="v1"><?=$language['track_btn']; ?></button>
 							<div class="loading">
 								<img src="css/fancybox_loading.gif" alt="<?=$language['loading']; ?>">
 							</div>
