@@ -400,12 +400,12 @@ $phone1wp = '79161352444';
 						<h1 class="title_def white">
 							<?=$language['tracking']; ?>
 						</h1>
-						<form method='post'>
+						<form action="http://home.courierexe.ru/290/tracking" method='GET'>
 							<p>
 								<?=$language['tracking_text']; ?>
 							</p>
-							<input type="text" class="mail-number" name="mail-number" placeholder="<?=$language['track_number']; ?>" required><br>
-							<button class="v1"><?=$language['track_btn']; ?></button>
+							<input type="text" class="mail-number" name="orderno" placeholder="<?=$language['track_number']; ?>" required><br>
+							<button class="v1" type="submit" name="singlebutton"><?=$language['track_btn']; ?></button>
 							<div class="loading">
 								<img src="css/fancybox_loading.gif" alt="<?=$language['loading']; ?>">
 							</div>
